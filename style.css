@@ -1,19 +1,41 @@
+*{
+  .abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+}
 .container-fluid{
     width: 100%;
    
 }
 .col-md-4 {
- margin-top: 2rem;
+
   }
 
-.home-img{
-    width: 100%;
-    height: 3rem;
-    
+ .home-img{
+  object-position: center;
+    width: 6%;
+    height:12vh; 
 
+  } 
+  .home-img{
+    
+      width: 100%;
+      height:12vh; 
+  
+    } 
+
+.rw_hight{
+max-height: 1rem;
+flex-wrap: wrap;
 }
 .height-img{
 height: 40rem;
+}
+.aln_text{
+ 
 }
 .card{
   margin: auto;
@@ -21,5 +43,39 @@ height: 40rem;
   text-align: center;
 }
 .btn{
-  margin-bottom: 2rem;
+  
+}
+body{
+  
+}
+.slides{
+  height: 100%;
+  overflow: hidden;
+}
+.tab_card{
+  height: vh100;
+}
+.products{
+  width: 100%;
+  height:100vh;
+  
+  
+}
+.tabs{
+  margin-top: 6rem;
+}
+.nav{
+  border-color: blue !important;
+}
+.nav-link.active{
+  border-color: blue blue rgb(241, 237, 237) !important;
+  ba
+}
+.nav-link{
+  color: #e9e8ed !important;
+  font-weight: 700;
+ 
+}
+.nav-link:hover{
+  border-color: blue !important;
 }

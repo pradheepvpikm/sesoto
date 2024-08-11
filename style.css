@@ -82,6 +82,16 @@ body{
   border-color: blue !important;
 }
 .about{
-  height: 100vh;
+ 
   padding-top: 5rem;
+}
+.form-label{
+  color: white;
+  
+}
+.enquiry{
+  overflow-y: scroll;
+}
+.enq_row{
+  margin-top: 5rem;
 }

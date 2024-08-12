@@ -12,64 +12,207 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container-fluid bg-black">
-
-      <div class="row fixed-top gx-0">
-        <!--navigation bar-->
-        
-
-        <div class="col-2 col-md-1 float-left px-2 py-1 bg-primary " style="--bs-bg-opacity: .75;">
-          <img src="images/sesoto.jpg" alt="Sesoto" class="home-img1 img-fluid img-thumbnail py-1 py-md-2 ">
-
-      </div>
-        <!-- <div class="col-3 col-md-2 chk_br bg-primary"> -->
-         
-          <!-- <h1 class="text-white fw-bold mt-1 mt-md-2 ">Sesoto</h1> -->
-
-        <!-- </div> -->
-        <div class="col-10 col-md-11 bg-primary chk_br float-left" style="--bs-bg-opacity: .75;">
-          <nav class="navbar navbar-expand-lg  ">
-            <div class="container-fluid">
-              
-              <a class="navbar-brand text-white ms-2 fw-bolder fs-1 text-left" href="index.html">Sesoto</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="Products.html">Products</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="circuitboards.html">Circuit Boards</a>
-                  </li>
+    <header>
+        <div class="container-fluid bg-black">
+    
+          <div class="row fixed-top gx-0">
+            <!--navigation bar-->
+            
+    
+            <div class="col-2 col-md-1 float-left px-2 py-1 bg-primary " style="--bs-bg-opacity: .75;">
+              <img src="images/sesoto.jpg" alt="Sesoto" class="home-img1 img-fluid img-thumbnail py-1 py-md-2 ">
+    
+          </div>
+            <!-- <div class="col-3 col-md-2 chk_br bg-primary"> -->
+             
+              <!-- <h1 class="text-white fw-bold mt-1 mt-md-2 ">Sesoto</h1> -->
+    
+            <!-- </div> -->
+            <div class="col-10 col-md-11 bg-primary chk_br float-left" style="--bs-bg-opacity: .75;">
+              <nav class="navbar navbar-expand-lg  ">
+                <div class="container-fluid">
                   
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="design.html">Design</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="index.html#about">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="enquiry.html">Enquiry</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="Support.html">Support</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-warning me-2" type="submit">Search</button>
-                </form>
+                  <a class="navbar-brand text-white ms-2 fw-bolder fs-1 text-left" href="index.html">Sesoto</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
+                      <!-- <li class="nav-item"> -->
+                        <!-- <a class="nav-link active text-white" aria-current="page" href="Products.html">Products</a> -->
+                      <!-- </li> -->
+                      <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="circuitboards.html">Circuit Boards</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="design.html">Design</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html#about">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="enquiry.html">Enquiry</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="Support.html">Support</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-warning me-2" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+    
+      </header>
+  <!-- products display -->
+   
+   
+  <section id="products">
+    <div class="container-fluid bg-black py-5">
+        <div class="row">
+         <div class="col-12 py-4">
+            <br>
+           <!-- <h1 class="text-white text-center">Filter Products with Bootstrap Tabs | Full Responsive</h1> -->
+         </div>
+          <div class="col-12 ">
+              <div class="bg-black rounded p-2">
+                <ul class="nav nav-tabs justify-content-center bg-black ">
+                 <li class="nav-item ">
+                   <a class="nav-link active" data-bs-toggle="tab" href="#all">All Products</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" data-bs-toggle="tab" href="#latest">Latest</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" data-bs-toggle="tab" href="#week">Papular</a>
+                 </li>
+               </ul>
+            <div class="row">
+              <div class="col-12">
+                <div class="tab-content p-4 ">
+                  <div id="all" class="tab-pane fade in active show">
+                     <div class="row">
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/amp1.png" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/4.jpg" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/5.jpg" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/6.jpg" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                  </div>
+                   <div id="latest" class="tab-pane fade ">
+                     <div class="row">
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/7.jpg" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/duel bridge 1.png" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                     
+                     </div>
+                  </div>
+                   <div id="week" class="tab-pane fade ">
+                     <div class="row">
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/rect 1.png" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/duel bridge 1.png" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-10 my-4">
+                        <div class="card">
+                          <img src="images/7.jpg" alt="">
+                          <div class="card-body">
+                            <h3 class="card-title">Product name</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, autem?</p>
+                            <button class="btn btn-outline-success">Read More</button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                  </div>
+ 
+                </div>
               </div>
             </div>
-          </nav>
+          </div>
+              </div>
         </div>
-      </div>
+     </div>
+    
+              
 
-  </header>
 
+
+      
+  </section>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="js/bootstrap.js"></script>
 

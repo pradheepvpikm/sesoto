@@ -5,51 +5,28 @@
     font-style: normal;
   }
   body{
-   
+   margin: 0;
+
   }
 }
 .container-fluid{
     width: 100%;
-   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.col-md-4 {
 
-  }
-
- .home-img{
-  object-position: center;
-    width: 6%;
-    height:12vh; 
-
-  } 
-  .home-img{
-    
-      width: 100%;
-      height:16vh; 
-  
-    } 
-
-.rw_hight{
-max-height: 1rem;
-flex-wrap: wrap;
+.carousel-img-height{
+height: 100vh;
 }
-.height-img{
-height: 40rem;
-}
-.aln_text{
- 
-}
+
 .card{
   margin: auto;
   height: 30rem;
   text-align: center;
 }
-.btn{
-  
-}
-body{
-  
-}
+
+
 .slides{
   height: 100vh;
   overflow: hidden;
@@ -71,10 +48,10 @@ body{
 }
 .nav-link.active{
   border-color: blue blue rgb(241, 237, 237) !important;
-  ba
+  
 }
 .nav-link{
-  color: #e9e8ed !important;
+  color: #eae8ef !important;
   font-weight: 700;
  
 }
@@ -95,6 +72,23 @@ body{
 .enq_row{
   margin-top: 5rem;
 }
+.card-text{
+  font-size:smaller;
+  list-style:circle;
+  font-weight: 400;
+  text-align: left;
+}
+.card-body{
+  background-color: rgb(48, 12, 176);
+  color: rgb(246, 245, 244);
+}
+.card-title{
+  margin: 0;
+  width: 100%;
+  font-weight: 700;
+  background-color: rgb(9, 9, 9);
+  
+}
 /* .img-div{
   width: 30rem;
   height: 30rem;
@@ -104,5 +98,12 @@ body{
   width: 100%;
   height: 10rem;
   border: 2px solid black;
+
+ }
+ .footer-cont{
+
+flex: 1;
+  background-color: cornflowerblue;
+  border: 2px solid white;
 
  }

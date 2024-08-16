@@ -11,9 +11,9 @@
 }
 .container-fluid{
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .carousel-img-height{
@@ -107,3 +107,15 @@ flex: 1;
   border: 2px solid white;
 
  }
+ /* design page */
+ 
+ .product-tabs{
+  margin-top: 5rem;
+
+ }
+ .pills-line{
+  height: 2px;
+  color: blue;
+ }
+ 
+ 

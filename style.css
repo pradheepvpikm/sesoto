@@ -22,7 +22,7 @@ height: 100vh;
 
 .card{
   margin: auto;
-  height: 30rem;
+  height: 34rem;
   text-align: center;
 }
 
@@ -104,7 +104,7 @@ height: 100vh;
 
 flex: 1;
   background-color: cornflowerblue;
-  border: 2px solid white;
+  border: 2px solid rgb(178, 218, 86);
 
  }
  /* design page */
@@ -117,5 +117,12 @@ flex: 1;
   height: 2px;
   color: blue;
  }
+ H3 SPAN{
+  font-weight: bolder;
+ }
+.btn:focus{
+  border: 1px solid black;
+  box-shadow: 50px rgba(202, 205, 36, 0.961);
+}
  
  

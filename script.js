@@ -1,6 +1,10 @@
 const parantDiv = document.getElementById('test-container');
 var i
 var hiddenCart=0
+var totalcount = 0
+var totalprice=0
+var totpricemultiple=0
+
 // document.getElementById('cart').style.display='none';
 
 function hideCart(){ //to hide the cart while page load
@@ -40,14 +44,37 @@ function hide(){  //to hide or unhide while pressing cart icon in nav bar
          let cartimg="cart-list-img"+i      //to create the id of the image div in cart eg:cart-list-img1
          let cartprice="cart-list-price"+i  //to create the id of price tage
          let cartCounter="counter"+i        // to create the id of counter
-         let pardiv=document.getElementById(imgParant).offsetParent //to select the upper div of the selected button
+         var totcount='cart-tot-count'
+         let pardiv=document.getElementById(imgParant).offsetParent //to select the upper div(main parent) of the selected button
 let parimg=pardiv.getElementsByTagName('img').item(0).src //to get src of image from the card div, which is the index 0 position of img tag(as it is the only img tag)
 let parprice=pardiv.getElementsByTagName('span').item(0).innerHTML
+//checking repeat click of same product___________
+for(let c=1;c<7;c++){
+  let chksrc =document.getElementById('cart-list-img'+c).src
+  
+if(parimg=== chksrc){
+  document.getElementById('counter'+c).innerHTML ++  // to set count as 1
+  document.getElementById(totcount).innerHTML++ // to set total count
+  document.getElementById('cart-symbol-count').innerHTML ++ //cart symbol at nav bar update
+  totalprice=Number(document.getElementById('cart-total').innerHTML) // to update total price____
+  totalprice += Number(document.getElementById('cart-list-price'+c).innerHTML)
+  document.getElementById('cart-total').innerHTML=totalprice //___________UPTO HERE
+  localStorage.setItem("counter"+c,document.getElementById('counter'+c).innerHTML)  //saved to loalstorage to restore after page refresh
+  
+  return
+}
+}
+//_________upto here
    document.getElementById(cartimg).src = parimg   //aply the src to cart div
    localStorage.setItem(cartimg,parimg)  //saved to loalstorage to restore after page refresh
    document.getElementById(cartprice).innerHTML = parprice
    localStorage.setItem(cartprice,parprice)  //saved to loalstorage to restore after page refresh
    document.getElementById(cartCounter).innerHTML = "1"  // to set count as 1
+   document.getElementById(totcount).innerHTML++ // to set total count
+   document.getElementById('cart-symbol-count').innerHTML ++ //cart symbol at nav bar update
+   totalprice=Number(document.getElementById('cart-total').innerHTML) // to update total price____
+   totalprice += Number(document.getElementById(cartprice).innerHTML)
+   document.getElementById('cart-total').innerHTML=totalprice //___________UPTO HERE
    localStorage.setItem(cartCounter,document.getElementById(cartCounter).innerHTML)  //saved to loalstorage to restore after page refresh
      i++
    localStorage.setItem('counter',i)
@@ -63,7 +90,13 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
     let rightArrowid=document.activeElement.id
     let lastdigit=rightArrowid.charAt(rightArrowid.length-1)
     let incrCounter="counter"+lastdigit
+    let incrprice ="cart-list-price"+lastdigit
     document.getElementById(incrCounter).innerHTML ++
+    document.getElementById('cart-tot-count').innerHTML++ //total count increment
+    document.getElementById('cart-symbol-count').innerHTML ++ //cart symbol at nav bar update
+    totalprice=Number(document.getElementById('cart-total').innerHTML) // to update total price____
+      totalprice += Number(document.getElementById(incrprice).innerHTML)
+      document.getElementById('cart-total').innerHTML=totalprice //___________UPTO HERE
     localStorage.setItem(incrCounter,document.getElementById(incrCounter).innerHTML)//to restore after refresh
   }
   function decrementCounter(){
@@ -73,10 +106,21 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
     let decrimg="cart-list-img"+lastdigitL
     let decrprice="cart-list-price"+lastdigitL
     let decrCounterN=Number(document.getElementById(decrCounter).innerHTML)
-    if(decrCounterN > 0){
+    if(decrCounterN >1){
       document.getElementById(decrCounter).innerHTML --
+      document.getElementById('cart-tot-count').innerHTML-- //total count decrement
+      document.getElementById('cart-symbol-count').innerHTML -- //cart symbol at nav bar update
+      totalprice=Number(document.getElementById('cart-total').innerHTML) // to update total price____
+      totalprice -= Number(document.getElementById(decrprice).innerHTML)
+      document.getElementById('cart-total').innerHTML=totalprice //___________UPTO HERE
       localStorage.setItem(decrCounter,document.getElementById(decrCounter).innerHTML)//to restore after refresh
          }else{
+          document.getElementById('cart-tot-count').innerHTML-- //total count decrement
+          document.getElementById('cart-symbol-count').innerHTML -- //cart symbol at nav bar update
+      totalprice=Number(document.getElementById('cart-total').innerHTML) // to update total price____
+      totalprice -= Number(document.getElementById(decrprice).innerHTML)
+      document.getElementById('cart-total').innerHTML=totalprice //___________UPTO HERE
+      document.getElementById(decrimg).src="" //to remove image src
           document.getElementById(leftArrowid).parentElement.style.display='none'
           localStorage.removeItem(decrimg) // to remove item from local storage
           localStorage.removeItem(decrprice)
@@ -123,11 +167,21 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
        document.getElementById(price+i).innerHTML=getprice
        document.getElementById(count+i).innerHTML=getcount
        document.getElementById(cartdiv+i).style.display='flex'
+        totalcount+= Number(getcount)
+        document.getElementById('cart-tot-count').innerHTML=totalcount 
+        document.getElementById('cart-symbol-count').innerHTML=totalcount //cart symbol at nav bar update
+        totpricemultiple = Number(getprice)*Number(getcount)
+        totalprice += totpricemultiple
+        document.getElementById('cart-total').innerHTML=totalprice
        hiddenCart--
        }
       
        
      }
+    }
+    function clearcart(){
+      localStorage.clear
+      
     }
 
     

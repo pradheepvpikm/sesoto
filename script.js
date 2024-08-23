@@ -10,12 +10,12 @@ function hideCart(){ //to hide the cart while page load
 
 function hide(){  //to hide or unhide while pressing cart icon in nav bar
   const btntext= document.getElementById('cart');
-if(btntext.style.display!='none'){
-   btntext.style.display='none';
-}else{
-  btntext.style.display='block';
+      if(btntext.style.display!='none'){
+       btntext.style.display='none';
+      }else{
+       btntext.style.display='block';
 
-}
+      }
 
 }
 
@@ -89,8 +89,45 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
     
          }
     }
-    function loadCart(){
+    function loadCart(){  //restore cart after page refresh also hide on page load
+      const btntext= document.getElementById('cart'); //hide on page load ____
+      if(btntext.style.display!='none'){
+       btntext.style.display='none';
+      }else{
+       btntext.style.display='block'; 
+
+      } //__________________________________upto here
+
+      let divhide  // hide all cart items on page load __
+      hiddenCart=6
+      for (let j=1;j<7;j++){  
+        divhide='cart-list'+j
+        document.getElementById(divhide).style.display='none'
+
+      }//_____________________________________________upto here
       
+      let imge ='cart-list-img'  //setting key  to restore value from localstorage
+      let price ='cart-list-price' // ""
+      let count = 'counter'  //  ""
+      let cartdiv='cart-list' //  getting div id to enable the div
+      let getimg
+      let getprice
+      let getcount
+      for (let i=1;i<7; i++){
+        
+       getimg= localStorage.getItem(imge+i) //get value from local storage respect to key
+       if(getimg !== null){  // check whether there is stored value exists or not
+       getprice= localStorage.getItem(price+i)
+       getcount= localStorage.getItem(count+i)
+       document.getElementById(imge+i).src=getimg
+       document.getElementById(price+i).innerHTML=getprice
+       document.getElementById(count+i).innerHTML=getcount
+       document.getElementById(cartdiv+i).style.display='flex'
+       hiddenCart--
+       }
+      
+       
+     }
     }
 
     

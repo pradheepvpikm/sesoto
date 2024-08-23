@@ -15,7 +15,7 @@
 
 </script>
 </head>
-<body onload="hideCart()">
+<body onload="hideCart()" > <!--onload="hideCart()"-->
   <header>
     <div class="container-fluid position-relative bg-black">
 
@@ -38,6 +38,7 @@
               
               <a class="navbar-brand text-white ms-2 fw-bolder fs-1 text-left" href="index.html">Sesoto</a>
               <button class="btn-cart bg-primary" onclick="hide()"><i class="bi bi-cart4"></i></button>
+              <span class="cart-symbol-count " id="cart-symbol-count">0</span>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -93,12 +94,12 @@
             <div class="row">
             <!-- card  starts -->
             <div class="col-lg-3 col-md-6 col-sm-10 my-4">
-              <div class="card">
-               <img src="images/3 way (599).jpg" alt="" >
+              <div class="card" id="div01">
+               <img src="images/3 way (599).jpg" id="img1" alt="" >
                 
                
                  
-                <div class="card-body p-0" >
+                <div class="card-body p-0" id="div1" >
                   <h5 class="card-title" id="card1Title">sesoto 3 Way Tone Controller Board</h5>
                     <ul class="card-text">
                     <li>High Fidelity & High Gain</li> 
@@ -110,7 +111,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN id="img1">599</SPAN></H3>
-                  <button class="btn btn-warning " onclick="addtext()">Add to Cart</button>
+                  <button class="btn btn-warning " id="1" onclick="addCart()">Add to Cart</button>
                   
 
                 </div>
@@ -133,7 +134,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>299</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="2" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -154,7 +155,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>299</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="3" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -175,7 +176,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>599</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="4" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -196,7 +197,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>749</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="5" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -217,7 +218,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>899</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="6" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -238,7 +239,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>1499</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="7" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -259,7 +260,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>1199</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="8" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -280,7 +281,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>299</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="9" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -301,7 +302,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>499</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="10" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -329,7 +330,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>899</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="11" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -350,7 +351,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>1499</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="12" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -371,7 +372,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>1199</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="13" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -392,7 +393,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>299</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="14" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -413,7 +414,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>499</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="15" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -444,7 +445,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>599</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="16" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -465,7 +466,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>299</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="17" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -486,7 +487,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>299</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="18" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -507,7 +508,7 @@
                                                 
                   </ul>
                   <H3>Rs : <SPAN>599</SPAN></H3>
-                  <button class="btn btn-warning ">Add to Cart</button>
+                  <button class="btn btn-warning " id="19" onclick="addCart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -529,11 +530,90 @@
     <aside class="cart" id="cart">
       <div class="cart-container" id="cart-container">
         <h3 class="font-type">Cart</h3>
-        <hr style="height: 5px; color: black;">
+        <!-- <hr style="height: 5px; color: black;"> -->
         <div id="cart-products" class="cart-products" >
-          <h3 id="card1" style="color: black;">hello</h3>
+          <!-- cart items preform1 -->
+          <div class="cart-list" id="cart-list1">             
+             <img src="images/AGB10 (299).jpg" class="cart-list-img" id="cart-list-img1"  alt="">
+             <h6 class="cart-list-price" >Rs : <span id="cart-list-price1">299</span></h6>
+             
+              <button class="left-arrow" id="leftArrow1" onclick="decrementCounter()"> < </button>
+              <h6 class="couunt" id="counter1">0</h6> 
+              <button class="right-arrow" id="rightArrow1" onclick="incrementCounter()">> </button>                          
+          </div>
+          <hr>
+          <!-- cart item prefor 1 end -->
+           <!-- cart items preform2 -->
+          <div class="cart-list" id="cart-list2">             
+            <img src="images/AGB10 (299).jpg" class="cart-list-img" id="cart-list-img2"  alt="">
+            <h6 class="cart-list-price" >Rs : <span id="cart-list-price2">299</span></h6>
+            
+             <button class="left-arrow" id="leftArrow2" onclick="decrementCounter()"> < </button>
+             <h6 class="couunt" id="counter2">0</h6> 
+             <button class="right-arrow"  id="rightArrow2" onclick="incrementCounter()">> </button>                          
+         </div>
+         <hr>
+         <!-- cart item prefor 2 end -->
+          <!-- cart items preform3 -->
+          <div class="cart-list" id="cart-list3">             
+            <img src="images/AGB10 (299).jpg" class="cart-list-img" id="cart-list-img3"  alt="">
+            <h6 class="cart-list-price" >Rs : <span id="cart-list-price3">299</span></h6>
+            
+             <button class="left-arrow" id="leftArrow3" onclick="decrementCounter()"> < </button>
+             <h6 class="couunt" id="counter3">0</h6> 
+             <button class="right-arrow" id="rightArrow3" onclick="incrementCounter()">> </button>                          
+         </div>
+         <hr>
+         <!-- cart item prefor 3 end -->
+          <!-- cart items preform4 -->
+          <div class="cart-list" id="cart-list4">             
+            <img src="images/AGB10 (299).jpg" class="cart-list-img" id="cart-list-img4"  alt="">
+            <h6 class="cart-list-price" >Rs : <span id="cart-list-price4">299</span></h6>
+            
+             <button class="left-arrow" id="leftArrow4" onclick="decrementCounter()"> < </button>
+             <h6 class="couunt" id="counter4">0</h6> 
+             <button class="right-arrow" id="rightArrow4" onclick="incrementCounter()">> </button>                          
+         </div>  
+         <hr>
+         <!-- cart item prefor 4 end -->
+          <!-- cart items preform5 -->
+          <div class="cart-list" id="cart-list5">             
+            <img src="images/AGB10 (299).jpg" class="cart-list-img" id="cart-list-img5"  alt="">
+            <h6 class="cart-list-price" >Rs : <span id="cart-list-price5">299</span></h6>
+            
+             <button class="left-arrow" id="leftArrow5" onclick="decrementCounter()"> < </button>
+             <h6 class="couunt" id="counter5">0</h6> 
+             <button class="right-arrow" id="rightArrow5" onclick="incrementCounter()">> </button>                          
+         </div>
+         <hr>
+         <!-- cart item prefor 5 end -->
+          <!-- cart items preform6 -->
+          <div class="cart-list" id="cart-list6">             
+            <img src="images/AGB10 (299).jpg" class="cart-list-img" id="cart-list-img6"  alt="">
+            <h6 class="cart-list-price" >Rs : <span id="cart-list-price6">299</span></h6>
+            
+             <button class="left-arrow" id="leftArrow6" onclick="decrementCounter()"> < </button>
+             <h6 class="couunt" id="counter6">0</h6> 
+             <button class="right-arrow" id="rightArrow6" onclick="incrementCounter()">> </button>                          
+         </div>
+         <hr>
+         <!-- cart item prefor 6 end -->
+        </div>
+        <!-- cart footer with buttons starts here -->
+        <div class="cart-end">
+          <div class="cart-total">
+            <h3>Total : </h3>
+            <h2 id="cart-total">0</h2>
+            <h3>Count : </h3>
+            <h2 id="cart-tot-count">0</h2>
+          </div>
+          <div class="cart-buttons">
+            <button id="cart-checkout" class="cart-button-style">check out</button>
+            <button id="cart-close" onclick="hideCart()" class="cart-button-style">Back to shoping</button>
+          </div>
           
         </div>
+        <!-- cart footer with buttons ends here -->
 
 
       </div>

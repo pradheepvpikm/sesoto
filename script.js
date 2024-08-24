@@ -190,20 +190,20 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
       localStorage.clear()
     }
 
-    function checkout(){
-      let chkimg
-      let chkprice
-      let chkcount
+    // function checkout(){
+    //   let chkimg
+    //   let chkprice
+    //   let chkcount
 
-      for(let chk=1;chk<7;chk++){
-        chkimg= localStorage.getItem('cart-list-img'+i) //get value from local storage respect to key
-       if(chkimg !== null){  // check whether there is stored value exists or not
-       chkprice= localStorage.getItem(price+i)
-       chkcount= localStorage.getItem(count+i)
+    //   for(let chk=1;chk<7;chk++){
+    //     chkimg= localStorage.getItem('cart-list-img'+i) //get value from local storage respect to key
+    //    if(chkimg !== null){  // check whether there is stored value exists or not
+    //    chkprice= localStorage.getItem(price+i)
+    //    chkcount= localStorage.getItem(count+i)
        
-       document.getElementById(price+i).innerHTML=getprice
-       document.getElementById(count+i).innerHTML=getcount
-       document.getElementById(cartdiv+i).style.display='flex'
-      }
-    }
+    //    document.getElementById(price+i).innerHTML=getprice
+    //    document.getElementById(count+i).innerHTML=getcount
+    //    document.getElementById(cartdiv+i).style.display='flex'
+    //   }
+    // }
     

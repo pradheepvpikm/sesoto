@@ -44,10 +44,12 @@ function hide(){  //to hide or unhide while pressing cart icon in nav bar
          let cartimg="cart-list-img"+i      //to create the id of the image div in cart eg:cart-list-img1
          let cartprice="cart-list-price"+i  //to create the id of price tage
          let cartCounter="counter"+i        // to create the id of counter
+         let cartname='productname'+i       // key value to store product name in local storage
          var totcount='cart-tot-count'
          let pardiv=document.getElementById(imgParant).offsetParent //to select the upper div(main parent) of the selected button
 let parimg=pardiv.getElementsByTagName('img').item(0).src //to get src of image from the card div, which is the index 0 position of img tag(as it is the only img tag)
 let parprice=pardiv.getElementsByTagName('span').item(0).innerHTML
+let parname= pardiv.getElementsByTagName('h5').item(0).innerHTML
 //checking repeat click of same product___________
 for(let c=1;c<7;c++){
   let chksrc =document.getElementById('cart-list-img'+c).src
@@ -60,13 +62,14 @@ if(parimg=== chksrc){
   totalprice += Number(document.getElementById('cart-list-price'+c).innerHTML)
   document.getElementById('cart-total').innerHTML=totalprice //___________UPTO HERE
   localStorage.setItem("counter"+c,document.getElementById('counter'+c).innerHTML)  //saved to loalstorage to restore after page refresh
-  
+  // document.getElementById(imgParant).style.backgroundColor='green'
   return
 }
 }
 //_________upto here
    document.getElementById(cartimg).src = parimg   //aply the src to cart div
    localStorage.setItem(cartimg,parimg)  //saved to loalstorage to restore after page refresh
+   localStorage.setItem(cartname,parname) //store product name in local storage for enquiry page
    document.getElementById(cartprice).innerHTML = parprice
    localStorage.setItem(cartprice,parprice)  //saved to loalstorage to restore after page refresh
    document.getElementById(cartCounter).innerHTML = "1"  // to set count as 1
@@ -190,20 +193,23 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
       localStorage.clear()
     }
 
-    // function checkout(){
-    //   let chkimg
-    //   let chkprice
-    //   let chkcount
+    function checkout(){
+      window.location.replace('https://pradheepvpikm.github.io/sesoto/enquiry.html')
+    }
+    function cartOnEnquiry(){
+        let chkimg
+      let chkprice
+      let chkcount
 
-    //   for(let chk=1;chk<7;chk++){
-    //     chkimg= localStorage.getItem('cart-list-img'+i) //get value from local storage respect to key
-    //    if(chkimg !== null){  // check whether there is stored value exists or not
-    //    chkprice= localStorage.getItem(price+i)
-    //    chkcount= localStorage.getItem(count+i)
+      for(let chk=1;chk<7;chk++){
+        chkimg= localStorage.getItem('cart-list-img'+chk) //get value from local storage respect to key
+       if(chkimg !== null){  // check whether there is stored value exists or not
+       chkprice= localStorage.getItem('cart-list-price'+chk)
+       chkcount= localStorage.getItem('counter'+chk)
        
-    //    document.getElementById(price+i).innerHTML=getprice
-    //    document.getElementById(count+i).innerHTML=getcount
-    //    document.getElementById(cartdiv+i).style.display='flex'
-    //   }
-    // }
-    
+       document.getElementById('cartproducts').innerHTML=chkprice + ':'+ chkcount
+      //  document.getElementById('cartproducts').innerHTML=chkcount
+      //  document.getElementById('cartproducts').innerHTML=chkcount
+      }
+    }
+  }

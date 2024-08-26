@@ -17,3 +17,24 @@ function cartOnEnquiry(){
   }
 }
 }
+function sendmail(){
+  
+  var params={
+    name  : 'pradheep',
+    message : 'just testing',
+   };
+   
+  const serviceID='service_afvrzwq';
+  const templateID='template_mvhnmlj';
+  emailjs.send('service_afvrzwq','template_mvhnmlj',params).then((response) => {
+    console.log('SUCCESS!', response.status, response.text);
+    alert('success')
+  },
+  (error) => {
+    console.log('FAILED...', error);
+  },)
+  
+  
+    
+    
+  }

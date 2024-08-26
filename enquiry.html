@@ -10,6 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "uoUD-uGTaeimVpU7i",
+      });
+   })();
+</script>
+
+
 </head>
 <body onload="cartOnEnquiry()">
     <header>
@@ -169,7 +181,7 @@
                   <textarea class="form-control" aria-label="With textarea" id="cartproducts"></textarea>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button class="btn btn-primary" onclick="sendmail()">Submit</button>
                 </div>
                 
               </form>

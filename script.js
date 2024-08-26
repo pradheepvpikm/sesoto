@@ -10,6 +10,7 @@ var totpricemultiple=0
 function hideCart(){ //to hide the cart while page load
   document.getElementById('cart').style.display='none';
   i=localStorage.getItem('counter') //to get variable from local storage
+  document.getElementById('order-form-div').style.display='none'
 }
 
 function hide(){  //to hide or unhide while pressing cart icon in nav bar
@@ -195,6 +196,8 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
 
     function checkout(){
       window.location.replace('https://pradheepvpikm.github.io/sesoto/enquiry.html')
+      // document.getElementById('order-form-div').style.display='flex'
+      // document.getElementById('cart').style.display='none'
     }
     function cartOnEnquiry(){
         let chkimg
@@ -213,3 +216,4 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
       }
     }
   }
+  

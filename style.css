@@ -27,6 +27,7 @@
 }
 .carousel-img-height{
 height:100vh;
+object-fit: cover;
 
 }
 
@@ -277,7 +278,7 @@ border-radius: 30px;
   width: 100vw;
   height: 100vh;
   padding-top: 5px;
-background-color:rgba(20,30,135,.86)
+background-image: radial-gradient(blue,black);
   
 
  }

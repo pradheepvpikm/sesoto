@@ -15,13 +15,21 @@
     flex-direction: row;
     flex-wrap: wrap; */
 }
+.contacts{
+ 
+  text-align: end;
+
+}
+
 .btn-cart{
   width: 50px;
   height: 50px;
 }
 .carousel-img-height{
-height: 100vh;
+height:100vh;
+
 }
+
 
 .card{
   margin: auto;
@@ -115,9 +123,13 @@ height: 100vh;
  .footer-cont{
 
 flex: 1;
-  background-color: cornflowerblue;
-  border: 2px solid rgb(178, 218, 86);
+  background-color: rgba(16, 82, 205,.85);
+  /* border: 2px solid rgb(178, 218, 86); */
 
+ }
+ .address{
+  display: flex;
+  justify-content: center;
  }
  /* design page */
  
@@ -202,11 +214,7 @@ justify-content: space-around;
   color: white;
   font-weight: bolder;
  }
- .countr{
-
-
-  
- }
+ 
  .left-arrow{
   
   background-color: white;
@@ -266,10 +274,11 @@ border-radius: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding-top: 5px;
-  background-color: rgb(25, 104, 202);
+background-color:rgba(20,30,135,.86)
+  
 
  }
  .msg-box{
@@ -277,22 +286,46 @@ border-radius: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 50vh;
-  background-color:rgb(203, 16, 213);
-  color: rgb(8, 8, 8);
-  border: 2px solid rgb(177, 16, 16);
-  box-shadow: 10px rebeccapurple;
-  border-radius: 25px;
+  width: 20rem;
+  height:20rem;
+  padding: 5px;
+  background-color:rgb(21, 189, 226);
+  color: rgb(9, 9, 9);
+  /* border: 2px solid rgb(177, 16, 16); */
+  box-shadow: 50px rgb(9, 9, 9);
+  border-radius: 50%;
+  text-wrap: wrap;
+  text-shadow: 20px black;
 
 
  }
- .goback{
-  position: absolute;
-  top: 0;
-  right: 0;
+ .response h4{
+  margin: 10px;
+  text-align: center;
+  color: burlywood;
+  font-weight: bolder;
+ }
+ .response h2{
+  margin: 10px;
+  text-align: center;
+  color: rgb(238, 226, 9);
+  font-weight: bolder;
+ }
+ #goback{
+  /* position: absolute; */
+  margin-bottom: 15px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: darkorchid;
+  background-color: rgb(240, 15, 191);
+ }
+ .payment{
+  text-align: center;
+  
+ }
+ .msg-box span{
+  font-size: larger;
+  font-weight: bolder;
+  color: chocolate;
+  letter-spacing: 3px;
  }

@@ -191,6 +191,7 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
         document.getElementById('cart-symbol-count').innerHTML='0'
         document.getElementById('cart-list'+clr).style.display='none'
       }
+      i=1
       localStorage.clear()
     }
 

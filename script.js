@@ -236,7 +236,7 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
   }
 }
 }
-function clearcart(){
+function clearCartOnSubmit(){
   
 i=1
 localStorage.clear()

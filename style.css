@@ -22,8 +22,11 @@
  
 }
 .contact-text{
-  text-align: right;
+  text-align: center;
   margin-right: 1rem;
+}
+#contact-email{
+  text-align: left;
 }
 
 .btn-cart{

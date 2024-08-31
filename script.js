@@ -240,5 +240,43 @@ function clearCartOnSubmit(){
   
 i=1
 localStorage.clear()
+window.location.replace('https://pradheepvpikm.github.io/sesoto/circuitboards.html')
+}
+function sendmail(){
+  var mfname =document.getElementById('mfname');
+   mfname=mfname.value
+  var msname = document.getElementById('msname');
+  msname=msname.value
+  let mphone = document.getElementById('mphone');
+  mphone=mphone.value
+  let madd1 = document.getElementById('madd1');
+  madd1=madd1.value
+  let madd2 = document.getElementById('madd2');
+  madd2.value
+   let mcity = document.getElementById('mcity');
+   mcity=mcity.value
+  let mstate = document.getElementById('mstate');
+  mstate=mstate.value
+  let mpin = document.getElementById('mzip');
+  mpin=mpin.value
+  let letter = document.getElementById('mmail');
+  letter=letter.value
+  let mproducts = document.getElementById('cartproducts');
+  mproducts=mproducts.value
+  let bodycontent = "first name : "+mfname+" <br> Second name : "+msname+"<br> MobileNumber : "+mphone+" <br> Address1 : "+madd1+"<br> Address2 : "+madd2+"<br> City : "+mcity+"<br> State : "+mstate+"<br> Pin : "+mpin+"<br> Email : "+letter+"<br> Requrements : "+mproducts;
+alert(bodycontent)
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "sesotopvtltd@gmail.com",
+    Password : "4EC5D66671B9276045B72923EFAC1D1FC42C",
+    To : 'sesotopvtltd@gmail.com',
+    From : "sesotopvtltd@gmail.com",
+    Subject : "from sesoto",
+    Body : bodycontent
+}).then(
+  // message => alert(message)
+  
+  window.location.replace('https://pradheepvpikm.github.io/sesoto/response.html')
+);
 }
   

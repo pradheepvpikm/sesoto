@@ -39,7 +39,7 @@ object-fit: cover;
 
 }
 .about-img{
-  box-shadow: 10px 10px 50px 10px  rgb(45, 41, 41);
+  box-shadow: 10px 10px 30px 10px  rgb(45, 41, 41);
 }
 
 
@@ -54,6 +54,25 @@ object-fit: cover;
   height: 100vh;
   overflow: hidden;
 }
+.flipcart{
+  width: 20px;
+  height: 23px;
+  margin-bottom: 3px;
+  margin-left: 2px;
+}
+.icon-container{
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  }
+.icon-modification{
+  width:50px;
+  height: 50px;
+  font-size: xx-large;
+
+}
+
+
 .tab_card{
   height: vh100;
 }
@@ -130,11 +149,7 @@ object-fit: cover;
 .footer-text{
   text-align: center;
 }
-.flipcart{
-  width: 15px;
-  height: 22px;
-  margin-bottom: 3px;
-}
+
 /* .btn-warning:hover{
   border-radius: 10px;
   background-color: rgb(113, 8, 24);
@@ -384,4 +399,22 @@ margin: 0;
   align-items: center;
   justify-content: center;
   background-image: radial-gradient(white,black);
+}
+/* enquiry form */
+.btn-submit{
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.submit-btn{
+  width: 30%;
+  margin-bottom: 1rem;
+  background-color: blue;
+  border-radius: 20px;
+  color: white;
+  font-weight: bolder;
+
+}
+.submit-btn:hover{
+  box-shadow: 3px 3px 2px 2px rgb(25, 159, 212);
 }

@@ -275,7 +275,7 @@ function sendmail(){
     Body : bodycontent
 }).then (function(message){
   alert('order has been submitteed successfully')
-  window.location.replace('https://pradheepvpikm.github.io/sesoto/response.html')
+  window.location.replace('https://pradheepvpikm.github.io/sesoto/response.html')//TO REROUTE TO RESPONSE PAGE AFTER SENDING MAIL
 
 } );
   
@@ -315,6 +315,6 @@ function wattsapp(){
   +" Email : "+wletter+"%0a"
   +" Requrements : "+wmproducts+"%0a%0a";
 
-  var url="https://wa.me/"+Number+"?text="+wbodycontent;
+  // var url="https://wa.me/"+Number+"?text="+wbodycontent;
   window.open(url,'_blank').focus();
 }

@@ -283,7 +283,7 @@ function sendmail(){
 }
   
 function wattsapp(){
-  let number=+918848049459;
+  let number= "+918848049459";
   var wmfname =document.getElementById('mfname');
    wmfname=wmfname.value
   var wmsname = document.getElementById('msname');
@@ -304,7 +304,7 @@ function wattsapp(){
   wletter=wletter.value
   let wmproducts = document.getElementById('cartproducts');
   wmproducts=wmproducts.value
-  var url="https://wa.me/"+Number+"?text="+ "first name : "+wmfname+"%0a" 
+  var url="https://wa.me/"+number+"?text="+ "first name : "+wmfname+"%0a" 
   +"Second name : "+wmsname+"%0a"
   +" MobileNumber : "+wmphone+"%0a"
   +" Address1 : "+wmadd1+"%0a"

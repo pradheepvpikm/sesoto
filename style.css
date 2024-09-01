@@ -55,8 +55,8 @@ object-fit: cover;
   overflow: hidden;
 }
 .flipcart{
-  width: 20px;
-  height: 23px;
+  width: 17px;
+  height: 21px;
   margin-bottom: 3px;
   margin-left: 2px;
 }
@@ -402,13 +402,16 @@ margin: 0;
 }
 /* enquiry form */
 .btn-submit{
+  width: 100%;
   display: flex;
   margin-top: 1rem;
   justify-content: center;
+  
 }
 .submit-btn{
   width: 30%;
   margin-bottom: 1rem;
+  margin-left: 2rem;
   background-color: blue;
   border-radius: 20px;
   color: white;

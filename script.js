@@ -264,7 +264,7 @@ function sendmail(){
   let mproducts = document.getElementById('cartproducts');
   mproducts=mproducts.value
   let bodycontent = "first name : "+mfname+" <br> Second name : "+msname+"<br> MobileNumber : "+mphone+" <br> Address1 : "+madd1+"<br> Address2 : "+madd2+"<br> City : "+mcity+"<br> State : "+mstate+"<br> Pin : "+mpin+"<br> Email : "+letter+"<br> Requrements : "+mproducts;
-alert(bodycontent)
+// alert(bodycontent)
   Email.send({
     Host : "smtp.elasticemail.com",
     Username : "sesotopvtltd@gmail.com",
@@ -273,10 +273,48 @@ alert(bodycontent)
     From : "sesotopvtltd@gmail.com",
     Subject : "from sesoto",
     Body : bodycontent
-}).then(
-  // message => alert(message)
-  
+}).then (function(message){
+  alert('order has been submitteed successfully')
   window.location.replace('https://pradheepvpikm.github.io/sesoto/response.html')
-);
+
+} );
+  
+  //  
 }
   
+function wattsapp(){
+  let number=+918848049459;
+  var wmfname =document.getElementById('mfname');
+   wmfname=wmfname.value
+  var wmsname = document.getElementById('msname');
+  wmsname=wmsname.value
+  let wmphone = document.getElementById('mphone');
+  wmphone=wmphone.value
+  let wmadd1 = document.getElementById('madd1');
+  wmadd1=wmadd1.value
+  let wmadd2 = document.getElementById('madd2');
+  wmadd2=wmadd2.value
+   let wmcity = document.getElementById('mcity');
+   wmcity=wmcity.value
+  let wmstate = document.getElementById('mstate');
+  wmstate=wmstate.value
+  let wmpin = document.getElementById('mzip');
+  wmpin=wmpin.value
+  let wletter = document.getElementById('mmail');
+  wletter=wletter.value
+  let wmproducts = document.getElementById('cartproducts');
+  wmproducts=wmproducts.value
+  var url="https://wa.me/"+Number+"?text="+ "first name : "+wmfname+"%0a" 
+  +"Second name : "+wmsname+"%0a"
+  +" MobileNumber : "+wmphone+"%0a"
+  +" Address1 : "+wmadd1+"%0a"
+  +" Address2 : "+wmadd2+"%0a"
+  +" City : "+wmcity+"%0a"
+  +" State : "+wmstate+"%0a"
+  +" Pin : "+wmpin+"%0a"
+  +" Email : "+wletter+"%0a"
+  +" Requrements : "+wmproducts+"%0a%0a";
+
+  var url="https://wa.me/"+Number+"?text="+wbodycontent;
+  window.open(url,'_blank').focus();
+}

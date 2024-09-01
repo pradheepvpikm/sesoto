@@ -25,6 +25,14 @@
   text-align: center;
   margin-right: 1rem;
 }
+.contact-text a{
+  color: rgb(240, 240, 243);
+  
+  }
+.contact-text a:hover{
+color: rgb(235, 224, 19);
+box-shadow: 2px 2px 2px 1px rgb(244, 244, 240);
+}
 #contact-email{
   text-align: left;
 }
@@ -148,6 +156,32 @@ object-fit: cover;
 }
 .footer-text{
   text-align: center;
+}
+.footer-menu{
+  text-align: center;
+  background-image: linear-gradient(rgb(196, 191, 221),rgba(33, 119, 238, 0.804));
+}
+.footer-list{
+  list-style: none;
+ 
+
+}
+.footer-list a{
+  text-decoration: none;
+  color: black;
+}
+
+.footer-list li{
+  
+  font-weight: bolder;
+  display: inline-block;
+  padding-inline: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-list a:hover{
+  color: blue;
+ 
 }
 
 /* .btn-warning:hover{
@@ -420,4 +454,5 @@ margin: 0;
 }
 .submit-btn:hover{
   box-shadow: 3px 3px 2px 2px rgb(25, 159, 212);
+  background-color: darkblue;
 }

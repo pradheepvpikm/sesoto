@@ -283,7 +283,7 @@ function sendmail(){
 }
   
 function wattsapp(){
-  let number= "918848049459";
+  let number= "918921254864";
   var wmfname =document.getElementById('mfname');
    wmfname=wmfname.value
   var wmsname = document.getElementById('msname');

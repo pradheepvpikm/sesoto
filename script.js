@@ -4,6 +4,7 @@ var hiddenCart=0
 var totalcount = 0
 var totalprice=0
 var totpricemultiple=0
+var checkoutPrice=0
 
 // document.getElementById('cart').style.display='none';
 
@@ -233,8 +234,11 @@ if (document.getElementById(cartimg).parentElement.style.display='none'){
    document.getElementById('cartproducts').innerHTML+='Product : '+chkname+', Price :  '+chkprice + ', Required Quntity : '+ chkcount+ 'Nos' +line
 //    document.getElementById('cartproducts').innerHTML=chkcount
   //  document.getElementById('cartproducts').innerHTML=chkcount
+  checkoutPrice += (Number(chkprice)*Number(chkcount)) // to calculate the total amout of products selected
   }
 }
+document.getElementById('totalPrice').value = 'Rs. '+ checkoutPrice 
+// alert('your total amount is : Rs . '+checkoutPrice)
 }
 function clearCartOnSubmit(){
   

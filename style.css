@@ -6,6 +6,7 @@
   }
   body{
    margin: 0;
+   padding: 0;
 
   }
 }
@@ -456,6 +457,21 @@ margin: 0;
   box-shadow: 3px 3px 2px 2px rgb(25, 159, 212);
   background-color: darkblue;
 }
+.enq-total{
+  display: flex;
+  justify-content: center;
+}
+#totalPrice{
+  max-width: 400px;
+ 
+  font-size:x-large;
+  font-weight: bolder;
+  text-align: center;
+  max-lines: 1;
+  
+
+
+}
 /* contacts */
 .contacts{
   width: 100%;
@@ -478,3 +494,25 @@ margin: 0;
   height: 5rem;
   
 }
+
+.proton{
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+ 
+  
+}
+.proton p{
+  display: flex;
+  font-weight: 100;
+  font-size: smaller;
+ align-items:flex-end ;
+}
+.proton p a{
+  color: rgb(19, 18, 18);
+
+}
+.proton p a:hover{
+  color: rgb(234, 228, 228);
+}
+
